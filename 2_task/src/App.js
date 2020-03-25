@@ -6,7 +6,9 @@ const App = () => {
   return (
     <div>
       <h1>Hello World!</h1>
-      <Person />
+      <Person name="Phuong" age="24" />
+      <Person name="Kati" age="25" />
+      <Person name="Karin" age="45" />
     </div>
   );
 };
