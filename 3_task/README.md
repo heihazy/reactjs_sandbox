@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is school project: Third task
 
-![Image of Counter](./public/counter-img.png)
+![Image of Counter](https://github.com/heihazy/reactjs_sandbox/blob/master/3_task/public/counter-img.PNG)
