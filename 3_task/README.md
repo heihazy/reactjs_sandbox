@@ -3,3 +3,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Third task
 
 This is school project: Third task
+![Image of Counter](/public/counter-img.png)
