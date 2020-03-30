@@ -5,10 +5,31 @@ class App extends Component {
   state = {
     likes: 0
   };
+
+  addLike = () => {
+    this.setState({
+      likes: this.state.likes + 1
+    });
+  };
+
+  removeLike = () => {
+    this.setState({
+      likes: this.state.likes - 1
+    });
+  };
+
+  reset = () => {
+    this.setState({
+      likes: 0
+    });
+  };
   render() {
     return (
       <div>
         <h1>Total Likes: {this.state.likes}</h1>
+        <button onClick={this.addLike}>Like</button>
+        <button onClick={this.removeLike}>Dislike</button>
+        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }
