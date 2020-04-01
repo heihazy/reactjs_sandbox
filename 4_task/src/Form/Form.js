@@ -27,6 +27,7 @@ const Form = props => {
           <label htmlFor="phone">Phone Number</label>
           <input
             type="number"
+            id="phone"
             name="phoneNumber"
             onChange={props.handleInputChange}
           />
@@ -35,6 +36,7 @@ const Form = props => {
           <label htmlFor="message">Message</label>
           <input
             type="text"
+            id="message"
             name="message"
             onChange={props.handleInputChange}
           />

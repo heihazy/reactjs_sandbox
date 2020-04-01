@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.view {
+    padding: 20px;
+}
+
+.preview {
+    color: #555;
+    font-size: 22px;
+    padding: 0 !important;
+    width: 100%;
+    border: 1px solid #dedede;
+}
+
+.preview p {
+    list-style: none;
+    border-bottom: 1px dotted #ccc;
+    text-indent: 20px;
+    height: auto;
+    padding: 10px;
+}
+
+.preview p:hover {
+    background-color: #f0f0f0;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+p span {
+    font-family: 'Courgette', cursive;
+}
+
+.lines {
+    border-left: 1px solid #ffaa9f;
+    border-right: 1px solid #ffaa9f;
+    width: 2px;
+    float: left;
+    height: 300px;
+    margin-left: 40px;
+}
