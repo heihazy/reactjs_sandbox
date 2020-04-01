@@ -4,11 +4,33 @@ import Form from "./Form/Form";
 import View from "./View/View";
 
 class App extends Component {
+  state = {
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    message: ""
+  };
+
+  handleInputChange = event => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
   render() {
     return (
       <div>
-        <Form />
-        <View />
+        <Form handleInputChange={this.handleInputChange} />
+        <View
+          firstName={this.state.firstName}
+          lastName={this.state.lastName}
+          phoneNumber={this.state.phoneNumber}
+          message={this.state.message}
+        />
       </div>
     );
   }
