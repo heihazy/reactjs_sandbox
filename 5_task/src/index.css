@@ -3,6 +3,7 @@ body {
   font-family: 'Bellota', cursive;
   background-image: linear-gradient(to left, lightcoral, rgb(240, 186, 179));
   text-align: center;
+  line-height: 2rem;
 }
 
 button {
