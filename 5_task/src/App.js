@@ -8,10 +8,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Speed Game</h1>
-        <h2>Your score is: {this.state.score}</h2>
-        <button onClick={startGame}>Start</button>
-        <button onClick={endGame}>End</button>
+        <h1>Smash The Virus</h1>
+        <h3>Your score is: 0</h3>
+        <button>Start</button>
+        <button>End</button>
       </div>
     );
   }
