@@ -6,3 +6,8 @@
     margin: 2rem;
     border-radius: 50%;
 }
+
+.circle.active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+    background: url('../virusphoto.jpg') no-repeat center center/cover;
+}
