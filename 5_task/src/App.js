@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import Circle from "./Circle/Circle";
+import GameOver from "./GameOver/GameOver";
 
 const getRndInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -10,6 +11,7 @@ class App extends Component {
   state = {
     score: 0,
     current: 0,
+    showGameOver: false,
   };
 
   pace = 1500;
@@ -41,6 +43,9 @@ class App extends Component {
 
   endHandler = () => {
     clearTimeout(this.timer);
+    this.setState({
+      showGameOver: true,
+    });
   };
   render() {
     return (
@@ -73,6 +78,7 @@ class App extends Component {
           <button onClick={this.startHandler}>Start</button>
           <button onClick={this.endHandler}>End</button>
         </div>
+        {this.state.showGameOver && <GameOver score={this.state.score} />}
       </div>
     );
   }
