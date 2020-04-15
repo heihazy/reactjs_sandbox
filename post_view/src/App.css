@@ -1,7 +1,1 @@
-.posts {
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  align-items: flex-start;
-  grid-gap: 1rem;
-  margin: 1rem;
-}
+

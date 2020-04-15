@@ -5,7 +5,7 @@ import Post from "./Post/Post";
 const posts = [
   {
     id: 1,
-    source: "https://source.unsplash.com/?dog",
+    source: "https://source.unsplash.com/300x300/?dog",
     title: "Velit laborum proident ullamco enim ea id nisi nisi.",
     author: "Phuong Laitinen",
     content:
@@ -13,15 +13,15 @@ const posts = [
   },
   {
     id: 2,
-    source: "https://source.unsplash.com/?decoration",
+    source: "https://source.unsplash.com/300x300/?decoration",
     title: "Sit non dolore nisi reprehenderit",
     author: "Ilari Laitinen",
     content:
-      "Incididunt consequat pariatur adipisicing ex consectetur ullamco qui nisi. Commodo nulla nulla do eu ex fugiat officia sint laborum pariatur anim. In culpa cillum commodo velit pariatur dolore ipsum elit minim.",
+      "Commodo nulla nulla do eu ex fugiat officia sint laborum pariatur anim. In culpa cillum commodo velit pariatur dolore ipsum elit minim.",
   },
   {
     id: 3,
-    source: "https://source.unsplash.com/?study",
+    source: "https://source.unsplash.com/300x300/?study",
     title: "Do cupidatat labore ut eu sit duis.",
     author: "Possulainen",
     content:
@@ -33,8 +33,16 @@ class App extends Component {
   state = {
     posts: posts,
   };
+  removeHandler = (listIndex) => {
+    const oldPost = [...this.state.posts];
+
+    oldPost.splice(listIndex, 1);
+    this.setState({
+      posts: oldPost,
+    });
+  };
   render() {
-    const postList = this.state.posts.map((post) => {
+    const postList = this.state.posts.map((post, index) => {
       return (
         <Post
           key={post.id}
@@ -42,6 +50,7 @@ class App extends Component {
           title={post.title}
           author={post.author}
           content={post.content}
+          click={this.removeHandler.bind(this, index)}
         />
       );
     });
