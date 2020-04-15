@@ -8,8 +8,10 @@ const GameOver = (props) => {
     <div className="overlay" onClick={closeOverlay}>
       <div className="popup">
         <div>
-          <h2>Oops it's over!!!</h2>
+          <h2>You failed!!!</h2>
+
           <p>You have smacked: {props.score} coronas </p>
+          <p>Go buy protective gears!</p>
         </div>
         <button onClick={closeOverlay}>Close</button>
       </div>

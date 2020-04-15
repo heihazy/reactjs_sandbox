@@ -1,13 +1,14 @@
 .circle {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    background: peachpuff;
-    margin: 2rem;
-    border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background: peachpuff;
+  margin: 2rem;
+  border-radius: 50%;
+  cursor: url("/5_task/public/pink-hammer.png"), auto;
 }
 
 .circle.active {
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
-    background: url('../virusphoto.jpg') no-repeat center center/cover;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+  background: url("../virusphoto.jpg") no-repeat center center/cover;
 }

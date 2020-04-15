@@ -1,0 +1,8 @@
+.post-card {
+  padding: 2rem;
+  background-color: #f8f6f6;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #b9b8b8;
+  display: grid;
+  align-items: center;
+}

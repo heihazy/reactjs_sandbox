@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellota:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bellota:ital@1&display=swap");
 body {
-  font-family: 'Bellota', cursive;
+  font-family: "Bellota", cursive;
   background-image: linear-gradient(to left, lightcoral, rgb(240, 186, 179));
-  text-align: center;
   line-height: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 button {
-  font-family: 'Bellota', cursive;
+  font-family: "Bellota", cursive;
   padding: 1rem;
   width: 150px;
   margin: 30px;
