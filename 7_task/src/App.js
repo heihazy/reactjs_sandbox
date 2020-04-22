@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const App = () => {
-  const [vote, setVote] = useState(0);
-  const addLove = () => setVote(vote + 1);
-  const addHate = () => setVote(vote + 1);
-  const resetVote = () => setVote(0);
+  const [love, setLove] = useState(0);
+  const [hate, setHate] = useState(0);
+  const addLove = () => setLove(love + 1);
+  const addHate = () => setHate(hate + 1);
+  const resetVote = () => setLove(0) + setHate(0);
   return (
     <div>
-      <button onClick={addLove}>Love Me</button>
-      <button onClick={addHate}>Hate Me</button>
-      <button onClick={resetVote}>Back to Neutral</button>
+      <Button click={addLove} text="Love Me"></Button>
+      <Button click={addHate} text="Hate Me"></Button>
+      <Button click={resetVote} text="Neutral"></Button>
       <h1>Votes:</h1>
-      <h3>Love: 0</h3>
-      <h3>Hate: 0</h3>
+      <h3>Love: {love}</h3>
+      <h3>Hate: {hate}</h3>
     </div>
   );
 };
