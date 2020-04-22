@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 import Button from "./Button";
 import Content from "./Content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,9 +35,7 @@ const App = () => {
       <Button click={resetVote} text="Neutral">
         <FontAwesomeIcon icon={faMeh} />
       </Button>
-      <Content title="Votes:"></Content>
-      <Content text1="Love:">{love}</Content>
-      <Content text1="Hate:">{hate}</Content>
+      <Content love={love} hate={hate} />
     </div>
   );
 };

@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import "./Button.css";
 
 const Button = ({ click, text, children }) => {
   return (
-    <>
-      <button onClick={click}>
-        {text} {children}
-      </button>
-    </>
+    <button onClick={click}>
+      {text} {children}
+    </button>
   );
 };
 
