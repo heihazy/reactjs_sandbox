@@ -1,0 +1,26 @@
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 150px 200px 150px;
+    justify-items: end;
+}
+
+.header {
+    background-color: rgb(85, 83, 83);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 20px;
+}
+
+h1 {
+    color: white;
+}

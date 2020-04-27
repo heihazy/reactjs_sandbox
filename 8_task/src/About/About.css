@@ -1,0 +1,16 @@
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+img {
+    width: 70%;
+}
+
+.about-me p {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+}

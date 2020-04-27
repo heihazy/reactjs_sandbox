@@ -1,0 +1,6 @@
+.landing-page {
+    color: black;
+    display: grid;
+    justify-items: center;
+    font-size: 3rem;
+}

@@ -1,12 +1,11 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Swich,
+  Switch,
   Route,
   Link,
   useParams,
   useRouteMatch,
-  Switch,
 } from "react-router-dom";
 
 const Nav = () => {
