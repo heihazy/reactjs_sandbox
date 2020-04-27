@@ -6,9 +6,8 @@ import Home from "./Home/Home";
 import About from "./About/About";
 import Blog from "./Blog/Blog";
 import Post from "./Blog/Post";
-import postdata from "./Blog/postdata";
+
 const App = () => {
-  const posts = postdata;
   return (
     <div>
       <Router>

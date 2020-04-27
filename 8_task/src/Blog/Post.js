@@ -1,4 +1,5 @@
 import React from "react";
+import "./Post.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,17 +8,16 @@ import {
   useParams,
   useRouteMatch,
 } from "react-router-dom";
-const Post = () => {
+const Post = (props) => {
   let { PostId } = useParams();
   return (
-    <div>
-      <h1>{PostId}</h1>
-      <p>
-        Aliqua dolor aute cillum exercitation ea do do esse exercitation
-        consequat laboris non deserunt. Nisi dolore in amet laboris anim eiusmod
-        aliqua exercitation id. Labore fugiat reprehenderit ullamco excepteur
-        ullamco in ullamco est eu elit proident esse excepteur.
-      </p>
+    <div onClick={props.click} className="post-card">
+      <img className="post" src={props.source} alt="post" />
+      <div className="blog-text">
+        <h2>{props.title}</h2>
+        <h3>{props.author}</h3>
+        <p>{props.content}</p>
+      </div>
     </div>
   );
 };
