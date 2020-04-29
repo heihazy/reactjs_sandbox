@@ -5,7 +5,6 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Blog from "./Blog/Blog";
-import Post from "./Blog/Post";
 
 const App = () => {
   return (
