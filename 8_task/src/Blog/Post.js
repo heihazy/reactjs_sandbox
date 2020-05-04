@@ -2,6 +2,7 @@ import React from "react";
 import "./Post.css";
 import { Link, useParams } from "react-router-dom";
 import posts from "../postdata";
+import Alert from "react-bootstrap/Alert";
 
 const Post = () => {
   let { postId } = useParams();
@@ -13,7 +14,11 @@ const Post = () => {
         <h2>{post.title}</h2>
         <h3>{post.author}</h3>
         <p>{post.content}</p>
-        <Link to="/blog">Back to Blog</Link>
+        <Alert>
+          <Alert.Link>
+            <Link to="/blog">Back to Blog</Link>
+          </Alert.Link>
+        </Alert>
       </div>
     </div>
   );
