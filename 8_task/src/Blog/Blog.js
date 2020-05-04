@@ -1,35 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 import Post from "./Post";
 import posts from "../postdata";
 import "./Blog.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
-import Button from "../Button/Button";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
-class Blog extends Component {
-  state = {
-    posts: posts,
-  };
-  render() {
-    const postList = this.state.posts.map((post, index) => {
-      return (
-        <Post
-          key={post.id}
-          source={post.source}
-          title={post.title}
-          author={post.author}
-          content={post.content}
-        />
-      );
-    });
-    return <div className="posts">{postList}</div>;
-  }
-}
-
+const Blog = () => {
+  let match = useRouteMatch();
+  const post = posts;
+  const postList = post.map((post) => {
+    return (
+      <div className="cards" key={post.id}>
+        <img src={post.source} alt={post.title} />
+        <div>
+          <h2>{post.title}</h2>
+          <h3>{post.author}</h3>
+          <p>{post.content}</p>
+          <Link to={`${match.url}/${post.title}`}>Read More</Link>
+        </div>
+      </div>
+    );
+  });
+  return (
+    <div className="posts">
+      <Switch>
+        <Route path="/blog/:postId">
+          <Post />
+        </Route>
+        <Route path={match.path}>{postList}</Route>
+      </Switch>
+    </div>
+  );
+};
 export default Blog;

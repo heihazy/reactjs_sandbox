@@ -1,29 +1,20 @@
 import React from "react";
 import "./Post.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
-import Button from "../Button/Button";
+import { Link, useParams } from "react-router-dom";
 import posts from "../postdata";
-import Blog from "./Blog";
-const findPost = () => {
-  posts.find(posts);
-};
-const Post = (props) => {
+
+const Post = () => {
+  let { postId } = useParams();
+  let post = posts.find((p) => p.title === postId);
   return (
     <div className="post-card">
-      <img className="post" src={props.source} alt="post" />
+      <img className="post" src={post.source} alt={post.title} />
       <div className="blog-text">
-        <h2>{props.title}</h2>
-        <h3>{props.author}</h3>
-        <p>{props.content}</p>
+        <h2>{post.title}</h2>
+        <h3>{post.author}</h3>
+        <p>{post.content}</p>
+        <Link to="/blog">Back to Blog</Link>
       </div>
-      <Button click={findPost} />
     </div>
   );
 };

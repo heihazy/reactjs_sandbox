@@ -1,17 +1,12 @@
 .post-card {
-    background-color: #f8f6f6;
-    border-radius: 5px;
-    border: 10px solid #f4f4f4;
-    box-shadow: 0 0 20px #b9b8b8;
-    width: fit-content;
+    justify-items: center;
     display: grid;
+    align-items: center;
+    margin: 50px;
+    width: 100%;
     justify-items: center;
 }
 
-.post {
-    width: 50%;
-}
-
 .blog-text {
-    width: 80%;
+    font-size: 1.3rem;
 }
